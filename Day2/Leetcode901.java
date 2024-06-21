@@ -2,12 +2,13 @@ package Day2;
 
 import java.util.Stack;
 import java.lang.*;
+
 public class LeetCode901 {
     Stack<int[]> s;
-    public StockSpanner() {
+    public StockSpanner(){
         s=new Stack<>();
     }
-    public int next(int price) {
+    public int next(int price){
         int span=1;
         while(!s.isEmpty() && price>=s.peek()[0]){
             span+=s.peek()[1];
